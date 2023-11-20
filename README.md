@@ -2,7 +2,7 @@
 
 ClickSwift is a link shortening service that offers enhanced security options, allowing users to set passwords & limit the number of clicks for access. Built using [Astro][astro] and [Supabase][supabase]
 
-[preview](https://github.com/dev5c32373043/clickswift/assets/13788002/0eb69823-c74b-430c-a962-ed723204d0f1)
+[preview](https://github.com/dev5c32373043/clickswift/assets/13788002/03cbb0b5-a983-43b2-9765-ca0de3d3ca05)
 
 ## Getting started
 
