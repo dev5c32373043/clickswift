@@ -1,0 +1,29 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+const action = `/l/${Astro.params.short_code}`;
+const wrongPasscode = Astro.url.searchParams.get('guessing') === '1';
+---
+
+<Layout title="You shall not pass?">  
+	<main class='flex min-h-screen justify-center items-center bg-gradient-to-t from-violet-600 via-cyan-300 to-violet-600'>
+    <form method="get" {action} class="flex max-md:w-full p-5 rounded-sm bg-white" class:list={{ 'border-red-500': wrongPasscode }}>
+      <div class="flex items-center py-4 gap-2">
+        <label class="label" for="link-passcode">
+          <span class="label-text">Passcode</span>
+        </label>
+    
+        <input
+          id="link-passcode"
+          name="passcode"
+          type="text"
+          placeholder="..."
+          class="input input-bordered w-full"
+          required
+        />
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </main>
+</Layout>

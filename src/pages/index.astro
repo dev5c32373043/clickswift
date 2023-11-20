@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome!">
+	<main class='flex min-h-screen flex-col items-center'>
+		<div class="hero min-h-screen" style="background-image: url(/hero.png);">
+			<div class="hero-overlay bg-opacity-60" />
+			<div class="hero-content text-center text-neutral-content">
+				<div class="max-w-md">
+					<h1 class="mb-5 text-5xl font-bold">ClickSwift: Short Links, Big Impact</h1>
+					<p class="mb-5">
+						Swift, share, and soar! ClickSwift allows you to trim long URLs into compact, efficient links for seamless sharing 😉
+					</p>
+					<a class="btn btn-primary" href="/login">Let me in!</a>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>
