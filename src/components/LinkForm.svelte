@@ -47,7 +47,7 @@
   }
 </script>
 
-<form method="POST" class="w-full max-md:p-4" on:submit|preventDefault={onSubmit}>
+<form method="POST" class="w-full max-lg:p-4" on:submit|preventDefault={onSubmit}>
   <h3 class="font-bold text-lg">New Link</h3>
 
   <label class="label" for="link-original-url">
@@ -68,8 +68,8 @@
     required
   />
 
-  <div class="flex items-center py-4 gap-2">
-    <div class="form-control self-end">
+  <div class="flex max-md:flex-col items-center py-4 gap-2">
+    <div class="form-control max-md:w-full self-end">
       <label class="label" for="link-name">
         <span class="label-text">*Name</span>
         {#if formErrors.name}
@@ -88,7 +88,7 @@
         required
       />
     </div>
-    <div class="form-control self-end">
+    <div class="form-control max-md:w-full self-end">
       <label class="label" for="link-click-limit">
         <span class="label-text">Click count limit</span>
         {#if formErrors.click_limit}
@@ -108,7 +108,7 @@
       />
     </div>
 
-    <div class="form-control self-end">
+    <div class="form-control max-md:w-full self-end">
       <label class="label" for="link-passcode">
         <span class="label-text">Passcode</span>
       </label>
@@ -123,11 +123,13 @@
       />
     </div>
 
-    <button type="submit" class="btn btn-primary self-end" disabled={requestInAction}>
-      {#if requestInAction}
-        <span class="loading loading-spinner" />
-      {/if}
-      Save & Copy
-    </button>
+    <div class="form-control self-end max-md:self-start w-full">
+      <button type="submit" class="btn btn-primary max-md:w-full max-md:mt-4" disabled={requestInAction}>
+        {#if requestInAction}
+          <span class="loading loading-spinner" />
+        {/if}
+        Save & Copy
+      </button>
+    </div>
   </div>
 </form>

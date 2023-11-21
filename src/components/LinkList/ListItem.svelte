@@ -54,8 +54,8 @@
     </svg>
   </div>
 
-  <div class="flex-1 flex flex-col justify-start w-[25rem]">
-    <h4 class="text-base text-slate-700">{link.name}</h4>
+  <div class="flex flex-1 flex-col justify-start min-w-0">
+    <h4 class="text-base truncate text-slate-700">{link.name}</h4>
     <span class="text-sm truncate text-slate-500">{link.original_url}</span>
   </div>
 
