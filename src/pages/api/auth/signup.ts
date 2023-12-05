@@ -11,7 +11,12 @@ export const POST: APIRoute = async ({ request }) => {
   }
 
   const { email, password } = result.data;
-  const { error } = await supabase.auth.signUp({ email, password });
+  const { error } = await supabase.auth.signUp({
+    email,
+    password,
+    options: { emailRedirectTo: `${import.meta.env.SITE_URL}/login?email-auth-step=2` }
+  });
+
   if (error) return errResp(error.message);
 
   return jsonResp({ ok: true });

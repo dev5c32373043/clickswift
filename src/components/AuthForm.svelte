@@ -19,7 +19,7 @@
       return;
     }
 
-    const redirectURL = action === 'signup' ? '/login' : '/app';
+    const redirectURL = action === 'signup' ? '/login?email-auth-step=1' : '/app';
     window.location.href = redirectURL;
   }
 </script>
